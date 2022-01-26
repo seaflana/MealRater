@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/textRestaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/restaurant"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/editRestaurant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editRestaurant"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:ems="14"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textRestaurant"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <requestFocus />
+
+        <TextView
+            android:id="@+id/textDish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="50dp"
+            android:text="Dish:"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/editDish"
+            app:layout_constraintTop_toBottomOf="@+id/textRestaurant" />
+
+        <EditText
+            android:id="@+id/editDish"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="30dp"
+            android:ems="14"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editRestaurant" />
+
+        <TextView
+            android:id="@+id/textRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="30dp"
+            android:text="Rating:"
+            app:layout_constraintEnd_toStartOf="@+id/textRating2"
+            app:layout_constraintTop_toBottomOf="@+id/textDish"
+            tools:layout_editor_absoluteX="159dp" />
+
+        <TextView
+            android:id="@+id/textRating2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="152dp"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@id/textRating"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editDish" />
+
+        <Button
+            android:id="@+id/buttonRating2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="120dp"
+            android:text="Rate Meal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textRating" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
