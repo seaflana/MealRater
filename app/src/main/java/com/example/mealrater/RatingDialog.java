@@ -22,9 +22,7 @@ public class RatingDialog extends DialogFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.select_rating, container);
-
-        getDialog().setTitle("Select Rating");
+        final View view = inflater.inflate(R.layout.select_rating, container, false);
 
         final RatingBar rb = view.findViewById(R.id.ratingBar);
         rb.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
